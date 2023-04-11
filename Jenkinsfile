@@ -30,13 +30,13 @@ pipeline {
         stage ('Deploy to Heroku'){
             steps{
                 withCredentials([usernameColonPassword(credentialsId: 'heroku', variable: 'HEROKU_CREDENTIALS')]) {
-                    sh 'git push https://${HEROKU_CREDENTIALS}@git.heroku.com/gallery-ip.git master'
+                    sh 'git push https://${HEROKU_CREDENTIALS}@git.heroku.com/gallery-project.git master'
             }
             }
         }
         stage ('Send Message to Slack'){
             steps{
-                slackSend channel: '#project-1', message: 'Build No. ${env.BUILD_NUMBER} has been successful  (<|Open>)', teamDomain: 'paulip1', tokenCredentialId: 'slack'
+                slackSend channel: '#project-1', message: "Build No. ${env.BUILD_NUMBER} has been successful https://gallery-ip.herokuapp.com/", teamDomain: 'paulip1', tokenCredentialId: 'slack'
             }
         }
 
