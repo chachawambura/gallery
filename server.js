@@ -13,7 +13,7 @@ const app = express();
 
 // connecting the database
 let mongodb_url = 'mongodb+srv://paulwambura:92wlAg2L6WOCTXnl@clusterdevopsip1.utv2fxv.mongodb.net/?retryWrites=true&w=majority';
-let dbName = 'darkroom';
+let dbName = 'ClusterDevOpsIP1';
 mongoose.connect(`${mongodb_url}${dbName}`,{ useNewUrlParser: true , useUnifiedTopology: true }, (err)=>{
     if (err) console.log(err)
 });

@@ -34,6 +34,11 @@ pipeline {
             }
             }
         }
+        stage ('Send Message to Slack'){
+            steps{
+                slackSend channel: '#project-1', message: 'Build No. ${env.BUILD_NUMBER} has been successful  (<|Open>)', teamDomain: 'paulip1', tokenCredentialId: 'slack'
+            }
+        }
 
 
         
