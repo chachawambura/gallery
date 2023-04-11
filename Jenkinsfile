@@ -19,7 +19,7 @@ pipeline {
         }
         stage ('Tests'){
             post {
-                failiure{
+                failure{
                     mail bcc: '', body: 'BRO! Your project has failed. Please check the tests. ', cc: '', from: '', replyTo: '', subject: 'Build Failure', to: 'paul.wambura@student.moringaschool.com'
                 }
             }
