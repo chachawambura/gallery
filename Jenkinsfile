@@ -9,12 +9,12 @@ pipeline {
                 git 'https://github.com/chachawambura/gallery'
             ]
         }
-        stage ('Install Dependencies'){
+        stage ('Install Dependency'){
             steps {
                 sh 'npm install'
             }
         }
-        
+           
 
     }
 }
