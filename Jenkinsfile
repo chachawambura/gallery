@@ -5,9 +5,12 @@ pipeline {
     }
     stages {
         stage('Clone Repository'){
-            steps[
+            steps{
                 git 'https://github.com/chachawambura/gallery.git'
-            ]
+
+            }
+                
+            
         }
         stage ('Install Dependency'){
             steps {
