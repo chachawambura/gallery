@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Clone Repository'){
             steps[
-                git 'https://github.com/chachawambura/gallery'
+                git 'https://github.com/chachawambura/gallery.git'
             ]
         }
         stage ('Install Dependency'){
